@@ -16,7 +16,7 @@ class Grid extends Component {
       <div id="grid">
         {grid.map((col, i) => {
           return col.map((row, j) => {
-            return <Spot i={i} j={j} styles={{}} />;
+            return <Spot key={`${i}-${j}`} i={i} j={j} />;
           });
         })}
       </div>
