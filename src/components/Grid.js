@@ -6,7 +6,7 @@ class Grid extends Component {
   state = {
     grid: Array.from({ length: 10 }, (_, i) => {
       return Array.from({ length: 10 }, (_, j) => {
-        return {};
+        return { f: Infinity, g: Infinity };
       });
     })
   };
@@ -15,8 +15,8 @@ class Grid extends Component {
     return (
       <div id="grid">
         {grid.map((col, i) => {
-          return col.map((row, j) => {
-            return <Spot key={`${i}-${j}`} i={i} j={j} />;
+          return col.map((spotProps, j) => {
+            return <Spot key={`${i}-${j}`} {...spotProps} i={i} j={j} />;
           });
         })}
       </div>
