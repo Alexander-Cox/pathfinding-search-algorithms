@@ -2,4 +2,9 @@
     border-style: solid;
     border-width: 2px;
     border-color: red;
+    padding: 3%;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
 }
